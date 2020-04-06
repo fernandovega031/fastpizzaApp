@@ -9,7 +9,7 @@ class WelcomeLoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container
       (
-      padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 20.0),
+      padding: EdgeInsets.fromLTRB(0.0, 90.0, 0.0, 20.0),
       child: ButtonTheme(
       minWidth: 350.0,
       height: 45.0,

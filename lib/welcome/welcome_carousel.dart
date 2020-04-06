@@ -34,7 +34,7 @@ final List child = map<Widget>(
         child: Stack(children: <Widget>[
           Image.asset(i, fit: BoxFit.cover),
           Positioned(
-            top: 0.0,
+            top: 10.0,
             bottom: 0.0,
             left: 0.0,
             right: 0.0,
@@ -71,6 +71,8 @@ class CarouselWithIndicator extends StatefulWidget {
 
 class _CarouselWithIndicatorState extends State<CarouselWithIndicator> {
   int _current = 0;
+  String textTitle = titleList[0];
+  String textDescription = descriptionList[0];
 
   @override
   Widget build(BuildContext context) {
@@ -85,23 +87,51 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicator> {
         onPageChanged: (index) {
           setState(() {
             _current = index;
+            textTitle = titleList[_current];
+            textDescription = descriptionList[_current];
           });
         },
+      ),
+      Container(
+        padding: EdgeInsets.fromLTRB(0.0, 35.0, 0.0, 15.0),
+        child:  Text(
+          '$textTitle',
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          style: TextStyle(
+              color: Color.fromRGBO(232, 79, 84, 1.0),
+              fontWeight: FontWeight.w600,
+              fontSize: 30
+          ),
+        ),
+      ),
+      Container(
+        padding: EdgeInsets.fromLTRB(80.0, 15.0, 80.0, 20.0),
+        child:  Text(
+          '$textDescription',
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          style: TextStyle(
+              color: Color.fromRGBO(0, 0, 0, 0.5),
+              fontWeight: FontWeight.w400,
+              fontSize: 17
+          ),
+        ),
       ),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: map<Widget>(
           imgList,
-              (index, url) {
+              (index, url){
             return Container(
-              width: 13.0,
-              height: 13.0,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+              width: 10.0,
+              height: 10.0,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 3.0),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: _current == index
-                      ? Color.fromRGBO(200, 0, 0, 0.9)
-                      : Color.fromRGBO(0, 0, 0, 0.4)),
+                      ? Color.fromRGBO(232, 79, 84, 0.9)
+                      : Color.fromRGBO(0, 0, 0, 0.1)),
             );
           },
         ),
