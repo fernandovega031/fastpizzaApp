@@ -8,6 +8,20 @@ final List<String> imgList = [
   'assets/images/imagen3.jpg',
  ];
 
+final List<String> titleList = [
+  'Select pizza ingredients',
+  'Our chefs cook',
+  'Fast delivery',
+ ];
+
+final List<String> descriptionList = [
+  'Discovered the best pizzas from  all our resturants',
+  'From all the best chefs in the word we cook for you',
+  'Fast delivery to your home, office or wherever you are',
+ ];
+
+
+
 final Widget placeholder = Container(color: Colors.grey);
 
 final List child = map<Widget>(

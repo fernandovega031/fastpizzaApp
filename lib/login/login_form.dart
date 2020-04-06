@@ -85,14 +85,14 @@ class _LoginFormState extends State<LoginForm> {
               child: ListView(
                 children: <Widget>[
                   Container(
-                    padding: EdgeInsets.fromLTRB(20.0, 20.0, 0.0, 40.0),
+                    padding: EdgeInsets.fromLTRB(20.0, 20.0, 140.0, 40.0),
                   child:  Text(
                       'Login to your account',
                     textAlign: TextAlign.left,
                     maxLines: 2,
                     style: TextStyle(
                       color: Color.fromRGBO(232, 79, 84, 1.0),
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w600,
                       fontSize: 30
                     ),
                     ),
@@ -104,8 +104,8 @@ class _LoginFormState extends State<LoginForm> {
                     keyboardType: TextInputType.emailAddress,
                     autocorrect: true,
                     decoration: InputDecoration(
-                      contentPadding: new EdgeInsets.symmetric(vertical: 1.0, horizontal: 10.0),
-                      hintText: '   Email',
+                      contentPadding: new EdgeInsets.symmetric(vertical: 1.0, horizontal: 20.0),
+                      hintText: 'Email',
                       hintStyle: TextStyle(color: Colors.grey),
                       filled: true,
                       fillColor: Colors.white,
@@ -128,8 +128,8 @@ class _LoginFormState extends State<LoginForm> {
                     autocorrect: false,
                     obscureText: _obscureText,
                     decoration: InputDecoration(
-                      contentPadding: new EdgeInsets.symmetric(vertical: 1.0, horizontal: 10.0),
-                      hintText: '   Password',
+                      contentPadding: new EdgeInsets.symmetric(vertical: 1.0, horizontal: 20.0),
+                      hintText: 'Password',
                       hintStyle: TextStyle(color: Colors.grey),
                       filled: true,
                       fillColor: Colors.white,

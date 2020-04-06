@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fastpizzaapp/user_repository.dart';
-//import 'package:fastpizzaapp/forgot_password/forgotpassword.dart';
+import 'package:fastpizzaapp/forgot_password/forgot_password_screen.dart';
 
 class ForgotPasswordButton extends StatelessWidget {
   /*final UserRepository _userRepository;
@@ -23,7 +23,7 @@ class ForgotPasswordButton extends StatelessWidget {
       onPressed: () {
         Navigator.of(context).push(
           MaterialPageRoute(builder: (context) {
-            //return ForgotPasswordScreen();
+            return ForgotPasswordScreen();
           }),
         );
       },
